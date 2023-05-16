@@ -1,0 +1,593 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+#login{
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#btnLogin{
+  background-color: #999fa0;
+  color: black;
+  font-weight: bold;
+  outline: auto;
+  padding: 4px;
+  
+} */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  font-family: "Verdana", cursive, sans-serif;
+  /* color: #ffffff; */
+}
+input[type="text"], input[type="radio"] {
+  padding: 10px;
+  margin: 5px;
+  /* border: 1px solid #ccc;  */
+  font-size: 16px;
+  color: black;
+}
+
+input[type="text"]:focus, input[type="radio"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  color: black;
+}
+/* #container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+} */
+/* .takeDiv{
+  font-size: 25px;
+  color: black;
+} */
+.takeBtn{
+  margin-top: 12px;
+  margin-left: 7px;
+  width: 130px;
+  height: 50px;
+  justify-content: center;
+}
+
+
+/* .app {
+  background-color: #252d4a;
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-evenly;
+} */
+/* .homeBtn{
+  width: 320px;
+  height: 100px;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  margin: 10px;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #234668;
+} */
+.btnDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.score-section {
+  display: flex;
+  font-size: 24px;
+  align-items: center;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.question-section {
+  width: 100%;
+  position: relative;
+}
+
+.question-count {
+  margin-bottom: 20px;
+}
+
+.question-count span {
+  font-size: 28px;
+}
+
+.question-text {
+  margin-bottom: 12px;
+}
+
+.timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.answer-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* button {
+  width: 100%;
+  height: 100px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  padding: 5px;
+  margin: 10px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 5px solid #234668;
+  cursor: pointer;
+} */
+
+.correct {
+  background-color: #2f922f;
+}
+
+.incorrect {
+  background-color: #ff3333;
+}
+
+button:hover {
+  background-color: #555e7d;
+}
+
+button:focus {
+  outline: none;
+}
+
+button svg {
+  margin-right: 5px;
+}
+
+
+/*Login.js*/
+#Loginbody {
+  background-image: url('https://i.pinimg.com/originals/75/c9/9c/75c99c75655541ebf6fb6ec8f62b0de4.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+#login{
+  background-image : url('https://wallpapercave.com/wp/wp3216916.jpg');
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#btnLogin{
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 50px;
+  border-radius: 40px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/*Home.js*/
+
+.home{
+  background-image: url('https://th.bing.com/th/id/OIP.6K4x2GXE-VMcfzlJ6ArJygHaEK?pid=ImgDet&rs=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100mH;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  border-radius: 20px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#homebody{
+  background-image: url('https://static.vecteezy.com/system/resources/previews/001/226/282/original/abstract-purple-gradient-low-polygon-design-vector.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#noquiz{
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}
+#Homebtn{
+  background-color: black;
+  margin-bottom: 10px;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 350px;
+  padding: 15px;
+  cursor: pointer;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.getQuiz{
+  display: block;
+  width: 400px;
+  margin: auto;
+  margin-bottom: 20px;
+  background-color: #4e79d1;
+  border-radius: 20px;
+  padding: 20px;
+
+
+}
+#copyText{
+  cursor: pointer;
+}
+
+/*Maker.js*/
+
+#makerbody{
+  background-image: url('https://static.vecteezy.com/system/resources/previews/001/226/282/original/abstract-purple-gradient-low-polygon-design-vector.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.createquiz{
+  min-height: 100vH;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.optionBox{
+  margin-bottom: 10px;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 10px;
+  cursor:text;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+}
+.quesBox{
+  flex-direction: column;
+  border-radius: 20px;
+  width: 390px;
+  padding: 15px;
+  cursor:text;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#topicBox{
+  flex-direction: column;
+  border-radius: 10px;
+  width: 300px;
+  padding: 10px;
+  cursor:text;
+  color: red;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: calc(10px + 2vmin);
+}
+
+#btnChoices{
+  background-color: #282c34;
+  display:flex;
+  width: 250px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor:pointer;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#warnings{
+  color: rgb(22, 253, 45);
+  font-size: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*Quiz.js*/
+
+
+.quizBody{
+  background-image: url('https://static.vecteezy.com/system/resources/previews/001/226/282/original/abstract-purple-gradient-low-polygon-design-vector.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#boxGradient{
+  background-image: url('https://th.bing.com/th/id/OIP.6K4x2GXE-VMcfzlJ6ArJygHaEK?pid=ImgDet&rs=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100mH;
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  border-radius: 20px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+.quiInnerBody{
+  display: flex;
+  flex-direction: column;
+  float: right;
+  border-radius: 20px;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+}
+.makeCenter{
+  display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.optionsSection{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  align-items: center;
+  width: 200px;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:black;
+  font-family: 'Times New Roman', Times, serif;
+}
+#ques{
+  height: 50px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.innerBody{
+  align-items: center;
+  /* display: flex; */
+  margin: 20px;
+  color: white;
+  font-size:30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+/*Taker.js*/
+
+.takeDiv{
+  background-image: url('https://th.bing.com/th/id/R.78b0bfde77bb81a0a1acb397302d494c?rik=BaI%2f%2bC0iBLCO9g&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f05%2f25%2f251398-pattern.jpg&ehk=FNK%2b3bizJsSs1TNfnDaWCDrymJ%2bZZx5iIuPhLvY7gm4%3d&risl=&pid=ImgRaw&r=0');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.innerDiv{
+  background-image : url('https://th.bing.com/th/id/OIP.6K4x2GXE-VMcfzlJ6ArJygHaEK?pid=ImgDet&rs=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  height: 300px;
+  border-radius: 20px;
+
+}
+#codepastebox{
+  width: 250px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor:text;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+}
+
+#wrongCode{
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.takeBtn{
+  background-color: #282c34;
+  width: 250px;
+  border-radius: 10px;
+  margin: 5px;
+  cursor:pointer;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#input{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/*review.js*/
+#outerDiv{
+  background-image: url('https://th.bing.com/th/id/R.78b0bfde77bb81a0a1acb397302d494c?rik=BaI%2f%2bC0iBLCO9g&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f05%2f25%2f251398-pattern.jpg&ehk=FNK%2b3bizJsSs1TNfnDaWCDrymJ%2bZZx5iIuPhLvY7gm4%3d&risl=&pid=ImgRaw&r=0');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#innerDiv{
+  background-image : url('https://th.bing.com/th/id/OIP.6K4x2GXE-VMcfzlJ6ArJygHaEK?pid=ImgDet&rs=1');
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 300px;
+  padding: 50px;
+  border-radius: 20px;
+}
+#Savebtn{
+  display: block;
+  margin: 20px;
+
+}
+
+#back{
+  background-color: black;
+  margin-bottom: 10px;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 200px;
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+#saved{
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+#quess{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#save{
+  background-color: black;
+  margin-bottom: 10px;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}
+
+#topic{
+  background-color: rgb(39, 11, 150);
+  margin-bottom: 10px;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 20px;
+  width: 200px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/*Result.js*/
+
+#scroreOuterBox{
+  background-image: url('https://th.bing.com/th/id/R.78b0bfde77bb81a0a1acb397302d494c?rik=BaI%2f%2bC0iBLCO9g&riu=http%3a%2f%2fwallup.net%2fwp-content%2fuploads%2f2016%2f05%2f25%2f251398-pattern.jpg&ehk=FNK%2b3bizJsSs1TNfnDaWCDrymJ%2bZZx5iIuPhLvY7gm4%3d&risl=&pid=ImgRaw&r=0');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+
+#innereScoreBox{
+    background-image : url('https://th.bing.com/th/id/OIP.6K4x2GXE-VMcfzlJ6ArJygHaEK?pid=ImgDet&rs=1');
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 40px;
+  border-radius: 20px;
+}
+
